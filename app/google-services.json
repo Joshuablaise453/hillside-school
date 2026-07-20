@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1627473777",
+    "project_id": "hillside-schoolapp",
+    "storage_bucket": "hillside-schoolapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1627473777:android:21bc5556d425adc0fc98d0",
+        "android_client_info": {
+          "package_name": "com.electrohub.schoolmanagementapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD36TjlotG9uqJwkYH4GPyH1723nGKfee0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
