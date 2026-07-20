@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple">#FF00FE</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="nav_dark">#1A1A1A</color> <!-- Dark background from image -->
+    <color name="nav_lime">#7CFF01</color> <!-- Bright lime indicator -->
+    <color name="nav_glass">#CC1A1A1A</color> <!-- Semi-transparent dark -->
+    <color name="nav_blue">#3399FF</color><!-- nav-blue -->
+    <color name="transparent_green">#4D006400</color>
+
+    <color name="success_green">#4CAF7D</color>
+    <color name="success_green_bg">#DCF2E6</color>
+    <color name="warning_amber">#F2A93B</color>
+    <color name="warning_amber_bg">#FCEAC9</color>
+    <color name="error_red">#D9534F</color>
+    <color name="error_red_bg">#FAE0DE</color>
+    <color name="off_white">#F4F7F9</color>
+    <color name="text">#5B6B7C</color>
+    <color name="muted">#8A99A8</color>
+    <color name="divider">#DCE6ED</color>
+    <color name="green">#086b38</color>
+    <color name="green2">#009a68</color>
+    <color name="red">#e61214</color>
+    <color name="red2">#600c1b</color>
+    <color name="t_green">#00FF44</color>
+    <color name="t2_green">#004D404D</color>
+    <color name="tp_green">#123C25B3</color>
+    <color name="t_white">#FFFFFFF0</color>
+    <color name="trans_white">#40FFFFFF</color>
+    <color name="t1_white">#fff0ff</color>
+    <color name="redgreen">#715018</color>
+    <color name="orange">#F26522</color>
+    <color name="new_green">#33623c</color>
+    <color name="t_red">#1AFF0000</color>
+    <color name="dashboard_bg">#F8F9FA</color>
+    <color name="card_dark_bg">#1A2421</color>
+    <color name="accent_maroon">#7C201C</color>
+    <color name="accent_gold">#009a68</color>
+    <color name="text_dark_green">#1B3A33</color>
+    <color name="text_muted_green">#708070</color>
+    <color name="surface_variant">#FFFFFF</color>
+    <color name="primary_green">#086B38</color>
+    <color name="primary_light">#E8F5E9</color>
+    <color name="secondary_text">#666666</color>
+    <color name="schedule_math_bg">#FFE0B2</color>
+    <color name="schedule_physics_bg">#C8E6C9</color>
+    <color name="schedule_calculus_bg">#BBDEFB</color>
+    <color name="timeline_line">#D4AF37</color>
+</resources>

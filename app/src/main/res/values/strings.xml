@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">Hillside Sch. App</string>
+
+    <!-- Splash -->
+    <string name="splash_tagline">School Management Portal</string>
+    <string name="explore">Visitor? Explore</string>
+
+
+    <!-- main_menu -->
+    <string name="school_name">Hillside Nursery and Primary Schools Naalya</string>
+
+
+    <!-- Login -->
+    <string name="login_title">Welcome back</string>
+    <string name="login_subtitle">Sign in to continue</string>
+    <string name="email_label">Email or Username</string>
+    <string name="password_label">Password</string>
+    <string name="login_button">LOGIN</string>
+    <string name="forgot_password">Forgot Password ? </string>
+    <string name="login_title_text">User Login</string>
+    <string name="no_account_prompt">Don\'t have an account ? </string>
+    <string name="signup_link">Sign Up</string>
+    <string name="get_started">Get Started</string>
+    <string name="contact_admin">Contact Admin</string>
+    <string name="login_error_empty">Please enter both email and password</string>
+    <string name="login_error_invalid">Invalid email or password</string>
+
+    <!-- Signup -->
+    <string name="signup_title">Create Account</string>
+    <string name="full_name_label">Full Name</string>
+    <string name="country_code_label">Code</string>
+    <string name="gender_label">Gender</string>
+    <string name="role_label">Role</string>
+    <string name="phone_label">Phone Number</string>
+    <string name="confirm_password_label">Confirm Password</string>
+    <string name="signup_button">SIGN UP</string>
+    <string name="already_have_account">Already have an account? </string>
+    <string name="login_link">Login</string>
+
+    <!-- Roles -->
+    <string name="role_admin">Admin</string>
+    <string name="role_teacher">Teacher</string>
+    <string name="role_bursar">Bursar</string>
+    <string name="role_student">Student</string>
+    <string name="role_parent">Parent</string>
+
+    <!-- Navigation labels -->
+    <string name="nav_home">Home</string>
+    <string name="nav_results">Results</string>
+    <string name="nav_fees">Fees</string>
+    <string name="nav_attendance">Attendance</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_announcements">Announcements</string>
+
+    <!-- Generic -->
+    <string name="loading">Loading…</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="empty_generic">Nothing to show yet.</string>
+    <string name="logout">Log out</string>
+    <string name="retry">Retry</string>
+
+    <!-- Learner -->
+    <string name="learner_title">Learner Dashboard</string>
+    <string name="upcoming">Upcoming Events</string>
+    <string name="hello">Hello,</string>
+    <string name="Attendance">Attendance</string>
+    <string name="grade_sheet">GradeSheet</string>
+    <string name="view_grade">View your grades</string>
+
+    <!-- Admin -->
+    <string name="admin_title">Admin Dashboard</string>
+</resources>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dashboard_bg"
+    tools:context=".ScheduleActivity">
+
+    <!-- Header -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/topbar_bg"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/scheduleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="48dp"
+            android:text="Class Schedule"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scheduleScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="-20dp"
+        app:layout_constraintBottom_toTopOf="@id/navCard"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <LinearLayout
+            android:id="@+id/scheduleContentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layoutAnimation="@anim/layout_animation_slide_up">
+
+            <!-- Premium Date Picker Placeholder -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:weightSum="5">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mon" android:textSize="12sp" android:textColor="@color/red2" />
+                        <TextView android:layout_width="32dp" android:layout_height="32dp" android:gravity="center" android:text="25" android:background="@drawable/nav_pill_bg" android:textColor="@color/red" android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tue" android:textSize="12sp" android:textColor="@color/secondary_text" />
+                        <TextView android:layout_width="32dp" android:layout_height="32dp" android:gravity="center" android:text="26" android:textColor="@color/text_dark_green" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wed" android:textSize="12sp" android:textColor="@color/secondary_text" />
+                        <TextView android:layout_width="32dp" android:layout_height="32dp" android:gravity="center" android:text="27" android:textColor="@color/text_dark_green" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thu" android:textSize="12sp" android:textColor="@color/secondary_text" />
+                        <TextView android:layout_width="32dp" android:layout_height="32dp" android:gravity="center" android:text="28" android:textColor="@color/text_dark_green" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fri" android:textSize="12sp" android:textColor="@color/secondary_text" />
+                        <TextView android:layout_width="32dp" android:layout_height="32dp" android:gravity="center" android:text="29" android:textColor="@color/text_dark_green" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Schedule Items -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="20dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="60dp" android:layout_height="wrap_content" android:text="08:00\nAM" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/text_dark_green" />
+                    <View android:layout_width="4dp" android:layout_height="40dp" android:background="@color/accent_maroon" android:layout_marginHorizontal="16dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mathematics" android:textStyle="bold" android:textColor="@color/text_dark_green" android:textSize="16sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Room 102 • Mr. Kato" android:textSize="12sp" android:textColor="@color/secondary_text" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="20dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="60dp" android:layout_height="wrap_content" android:text="10:00\nAM" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/text_dark_green" />
+                    <View android:layout_width="4dp" android:layout_height="40dp" android:background="@color/primary_green" android:layout_marginHorizontal="16dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="English Language" android:textStyle="bold" android:textColor="@color/text_dark_green" android:textSize="16sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Room 204 • Mrs. Nali" android:textSize="12sp" android:textColor="@color/secondary_text" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="20dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="60dp" android:layout_height="wrap_content" android:text="12:00\nPM" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/secondary_text" />
+                    <View android:layout_width="4dp" android:layout_height="40dp" android:background="@color/accent_gold" android:layout_marginHorizontal="16dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lunch Break" android:textStyle="bold" android:textColor="@color/text_dark_green" android:textSize="16sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Main Dining Hall" android:textSize="12sp" android:textColor="@color/secondary_text" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Reminders &amp; Extra-Curricular"
+                android:textColor="@color/text_dark_green"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/primary_light">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:id="@+id/extraTitle1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Football Practice" android:textStyle="bold" android:textColor="@color/primary_green" android:textSize="16sp" />
+                        <TextView android:layout_below="@id/extraTitle1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4:30 PM - 5:30 PM" android:textColor="@color/primary_green" android:textSize="12sp" />
+                        <ImageView android:layout_alignParentEnd="true" android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_lock_silent_mode_off" app:tint="@color/primary_green" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tomorrow's Prep" android:textStyle="bold" android:textColor="@color/text_dark_green" android:layout_marginBottom="8dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="• Bring Science Lab Coat\n• Math Geometry Set required\n• Library Book Return" android:textSize="13sp" android:textColor="@color/secondary_text" android:lineSpacingExtra="4dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Professional Bottom Navigation -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/navCard"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="35dp"
+        app:cardElevation="12dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View android:id="@+id/navSelectionPill" android:layout_width="0dp" android:layout_height="match_parent" android:background="@drawable/nav_pill_bg" android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout android:id="@+id/navItemHome" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center">
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_today" app:tint="@color/text_muted_green" />
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/navItemSearch" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center">
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_agenda" app:tint="@color/text_muted_green" />
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/navItemNotify" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_my_calendar" app:tint="@color/primary_green" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Schedule" android:textColor="@color/primary_green" android:textSize="10sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/navItemProfile" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center">
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_myplaces" app:tint="@color/text_muted_green" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

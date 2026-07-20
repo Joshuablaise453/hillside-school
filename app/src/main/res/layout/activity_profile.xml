@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dashboard_bg"
+    tools:context=".ProfileActivity">
+
+    <!-- Header -->
+    <View
+        android:id="@+id/headerBackground"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/topbar_bg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="My Profile"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileImageLarge"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="120dp"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/blaise"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CircleImage"
+        android:elevation="8dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/profileScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@id/navCard"
+        app:layout_constraintTop_toBottomOf="@id/profileImageLarge">
+
+        <LinearLayout
+            android:id="@+id/profileContentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:layoutAnimation="@anim/layout_animation_slide_up">
+
+            <TextView
+                android:id="@+id/profileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="[User name]"
+                android:textColor="@color/text_dark_green"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Student ID: SMS-2023-045"
+                android:textColor="@color/secondary_text"
+                android:textSize="14sp" />
+
+            <!-- Info Cards -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contact Information" android:textStyle="bold" android:textColor="@color/primary_green" android:layout_marginBottom="12dp" />
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Email" android:textSize="12sp" android:textColor="@color/secondary_text" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="blaise.brize@school.edu" android:textSize="16sp" android:textColor="@color/text_dark_green" android:textStyle="bold" android:layout_marginBottom="16dp" />
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Phone" android:textSize="12sp" android:textColor="@color/secondary_text" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+256 701 234 567" android:textSize="16sp" android:textColor="@color/text_dark_green" android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Academic Details -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Academic Details" android:textStyle="bold" android:textColor="@color/primary_green" android:layout_marginBottom="12dp" />
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="2">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Class" android:textSize="12sp" android:textColor="@color/secondary_text" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Primary Five" android:textSize="16sp" android:textColor="@color/text_dark_green" android:textStyle="bold" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Section" android:textSize="12sp" android:textColor="@color/secondary_text" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Green House" android:textSize="16sp" android:textColor="@color/text_dark_green" android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Financial Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fee Balance" android:textSize="12sp" android:textColor="@color/secondary_text" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="UGX 150,000" android:textSize="18sp" android:textColor="@color/red" android:textStyle="bold" />
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:text="Pay Now"
+                        android:textSize="12sp"
+                        android:backgroundTint="@color/primary_green"
+                        app:cornerRadius="8dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Account Settings -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="Change Password" android:textColor="@color/text_dark_green" android:drawableStart="@android:drawable/ic_lock_lock" android:drawablePadding="16dp" android:gravity="center_vertical" />
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="Notification Settings" android:textColor="@color/text_dark_green" android:drawableStart="@android:drawable/ic_popup_reminder" android:drawablePadding="16dp" android:gravity="center_vertical" />
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="Help &amp; Support" android:textColor="@color/text_dark_green" android:drawableStart="@android:drawable/ic_menu_help" android:drawablePadding="16dp" android:gravity="center_vertical" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="@color/accent_maroon"
+                android:text="Log Out"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Professional Bottom Navigation -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/navCard"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="35dp"
+        app:cardElevation="12dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View android:id="@+id/navSelectionPill" android:layout_width="0dp" android:layout_height="match_parent" android:background="@drawable/nav_pill_bg" android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout android:id="@+id/navItemHome" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center">
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_today" app:tint="@color/text_muted_green" />
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/navItemSearch" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center">
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_agenda" app:tint="@color/text_muted_green" />
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/navItemNotify" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center">
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_my_calendar" app:tint="@color/text_muted_green" />
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/navItemProfile" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_myplaces" app:tint="@color/primary_green" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profile" android:textColor="@color/primary_green" android:textSize="10sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

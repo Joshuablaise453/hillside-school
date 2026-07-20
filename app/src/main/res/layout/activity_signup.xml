@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SignupActivity">
+
+    <View
+        android:id="@+id/headerView"
+        android:layout_width="344dp"
+        android:layout_height="307dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="195dp"
+        android:layout_height="221dp"
+        android:contentDescription="@string/app_name"
+        android:padding="10dp"
+        android:src="@drawable/hillsid"
+        app:layout_constraintBottom_toBottomOf="@+id/headerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/headerView"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <TextView
+        android:id="@+id/signupTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signup_title"
+        android:textColor="@color/red2"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/headerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logoImage"
+        app:layout_constraintVertical_bias="0.875" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/loginLinkContainer"
+        app:layout_constraintTop_toBottomOf="@+id/headerView">
+
+        <LinearLayout
+            android:id="@+id/inputContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <!-- Full Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullNameInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fullNameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@android:drawable/ic_menu_edit"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/muted"
+                    android:elevation="2dp"
+                    android:hint="@string/full_name_label"
+                    android:inputType="textPersonName"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Email/Username -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:hintEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@android:drawable/ic_dialog_email"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/muted"
+                    android:elevation="2dp"
+                    android:hint="@string/email_label"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Phone Number & Country Code -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/countryCodeInputLayout"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:hintEnabled="true">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/countryCodeDropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/input_bg"
+                        android:hint="@string/country_code_label"
+                        android:inputType="none"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:elevation="2dp"
+                        android:textSize="14sp"
+                        android:focusable="false"
+                        android:cursorVisible="false"
+                        android:clickable="true"
+                        android:drawableEnd="@android:drawable/arrow_down_float"
+                        android:drawableTint="@color/muted" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phoneInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phoneInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/input_bg"
+                        android:drawableStart="@android:drawable/ic_menu_call"
+                        android:drawablePadding="12dp"
+                        android:drawableTint="@color/muted"
+                        android:elevation="2dp"
+                        android:hint="@string/phone_label"
+                        android:inputType="phone"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- Gender and Role Dropdowns -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/genderInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    app:hintEnabled="true">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/genderDropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/input_bg"
+                        android:hint="@string/gender_label"
+                        android:inputType="none"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:focusable="false"
+                        android:cursorVisible="false"
+                        android:clickable="true"
+                        android:drawableEnd="@android:drawable/arrow_down_float"
+                        android:drawableTint="@color/muted"
+                        android:elevation="2dp"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/roleInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    app:hintEnabled="true">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/roleDropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/input_bg"
+                        android:hint="@string/role_label"
+                        android:inputType="none"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:focusable="false"
+                        android:cursorVisible="false"
+                        android:clickable="true"
+                        android:drawableEnd="@android:drawable/arrow_down_float"
+                        android:drawableTint="@color/muted"
+                        android:elevation="2dp"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- Password -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/muted"
+                app:hintEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@android:drawable/ic_lock_idle_lock"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/muted"
+                    android:elevation="2dp"
+                    android:hint="@string/password_label"
+                    android:inputType="textPassword"
+                    android:paddingStart="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Confirm Password -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/confirmPasswordInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/muted"
+                app:hintEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/confirmPasswordInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@android:drawable/ic_lock_idle_lock"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/muted"
+                    android:elevation="2dp"
+                    android:hint="@string/confirm_password_label"
+                    android:inputType="textPassword"
+                    android:paddingStart="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signupButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/button_bg"
+                android:text="@string/signup_button"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:elevation="4dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/loginLinkContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_have_account"
+            android:textColor="@color/muted"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/loginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="@string/login_link"
+            android:textColor="@color/red"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
