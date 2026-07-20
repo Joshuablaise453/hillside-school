@@ -1,0 +1,32 @@
+<!-- Modern Floating Bottom Navigation -->
+<androidx.cardview.widget.CardView android:id="@+id/navContainer" android:layout_width="match_parent"
+    android:layout_height="75dp" android:layout_margin="16dp" app:cardBackgroundColor="@android:color/transparent"
+    app:cardElevation="10dp" app:layout_constraintBottom_toBottomOf="parent">
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <!-- The Custom Curved Background -->
+        <com.electrohub.schoolmanagementapp.CurvedBottomNavigationView android:id="@+id/curvedBg"
+            android:layout_width="match_parent" android:layout_height="match_parent" />
+
+        <!-- Moving Selection Circle -->
+        <View android:id="@+id/navIndicator" android:layout_width="55dp" android:layout_height="55dp"
+            android:background="@drawable/nav_circle_bg" android:translationY="-15dp" />
+
+        <!-- Navigation Icons -->
+        <LinearLayout android:id="@+id/navIconContainer" android:layout_width="match_parent"
+            android:layout_height="match_parent" android:orientation="horizontal" android:weightSum="4">
+
+            <ImageView android:id="@+id/nav_home" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                android:src="@android:drawable/ic_menu_today" android:scaleType="center" app:tint="@color/white" />
+            <ImageView android:id="@+id/nav_calendar" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1" android:src="@android:drawable/ic_menu_my_calendar" android:scaleType="center"
+                app:tint="@color/white" />
+            <ImageView android:id="@+id/nav_messages" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1" android:src="@android:drawable/stat_notify_chat" android:scaleType="center"
+                app:tint="@color/white" />
+            <ImageView android:id="@+id/nav_more" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                android:src="@android:drawable/ic_menu_more" android:scaleType="center" app:tint="@color/white" />
+        </LinearLayout>
+    </FrameLayout>
+</androidx.cardview.widget.CardView>
